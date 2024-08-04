@@ -1,0 +1,32 @@
+.hero {
+
+}
+
+.hero__section {
+  background-color: rgba(104, 183, 56, 0.85);
+}
+
+.hero__header {
+  font-family: $secondary-font;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 36px;
+  color: #ffffff;
+}
+
+.hero__slogan {
+  font-family: $secondary-font;
+  font-size: 14px;
+  line-height: 14px;
+  color: #ffffff;
+}
+
+.hero__button {
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+
+  background-color: #68b738;
+  text-transform: uppercase;
+}

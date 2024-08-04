@@ -1,7 +1,32 @@
 /* GLOBAL */
 @import "./common/variables.scss";
-@import "./common/global.scss";
+@import "./common/mixins.scss";
 @import "./common/fonts.scss";
+@import "./common/global.scss";
+@import "./common/visually-hidden.scss";
 
 /* BLOCKS */
-@import "./blocks/header.scss";
+@import "./blocks/page.scss";
+@import "./blocks/button-primary.scss";
+@import "./blocks/button-secondary.scss";
+@import "./blocks/main-header.scss";
+@import "./blocks/main-nav.scss";
+@import "./blocks/main-container.scss";
+@import "./blocks/hero.scss";
+@import "./blocks/options.scss";
+@import "./blocks/about.scss";
+@import "./blocks/example.scss";
+@import "./blocks/facts-list.scss";
+@import "./blocks/catalog.scss";
+@import "./blocks/catalog-card.scss";
+@import "./blocks/values-list.scss";
+@import "./blocks/show-more.scss";
+@import "./blocks/extra.scss";
+@import "./blocks/extra-card.scss";
+@import "./blocks/bonus.scss";
+@import "./blocks/subscribe.scss";
+@import "./blocks/email-form.scss";
+@import "./blocks/partnership.scss";
+@import "./blocks/main-footer.scss";
+@import "./blocks/social-list.scss";
+@import "./blocks/developer-wrapper.scss"

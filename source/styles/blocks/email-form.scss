@@ -1,0 +1,9 @@
+.email-form__input {
+  font-family: $secondary-font;
+  font-size: 20px;
+  color: #444444;
+
+  &::placeholder {
+    text-transform: uppercase;
+  }
+}
