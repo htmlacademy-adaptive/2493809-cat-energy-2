@@ -1,7 +1,3 @@
-.about {
-
-}
-
 .about__title {
   font-family: $secondary-font;
   font-size: 36px;
@@ -14,4 +10,20 @@
   font-size: 14px;
   line-height: 18px;
   color: #444444;
+}
+
+.about__description--healthy {
+  background-image: url("../../icons/stack.svg#icon-leaf");
+}
+
+.about__description--powder {
+  background-image: url("../../icons/stack.svg#icon-mix");
+}
+
+.about__description--replace {
+  background-image: url("../../icons/stack.svg#icon-eat");
+}
+
+.about__description--when {
+  background-image: url("../../icons/stack.svg#icon-scales");
 }

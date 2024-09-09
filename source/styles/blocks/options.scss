@@ -1,9 +1,13 @@
-.options {
-
-}
-
 .options__item {
   background-color: #f2f2f2;
+}
+
+.options__item--slim {
+  background-image: url("../../icons/stack.svg#icon-slim");
+}
+
+.options__item--mass {
+  background-image: url("../../icons/stack.svg#icon-mass");
 }
 
 .options__title {
@@ -23,12 +27,33 @@
 }
 
 .options__link {
+  position: relative;
+
+  display: block;
+  width: 136px;
+  padding-right: 50px;
+
   font-family: $secondary-font;
   font-size: 16px;
   line-height: 16px;
   color: #000000;
-
   text-decoration: none;
   text-transform: uppercase;
+
+  &::after {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: inline-block;
+    width: 32px;
+    height: 10px;
+
+    background-color: #000000;
+    content: "";
+    mask-image: url("../../icons/stack.svg#icon-arrow");
+    mask-repeat: no-repeat;
+  }
 }
 
