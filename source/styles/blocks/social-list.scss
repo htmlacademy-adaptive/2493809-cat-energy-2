@@ -1,0 +1,44 @@
+.social-list__link {
+  display: block;
+  min-width: 28px;
+  min-height: 22px;
+}
+
+.social-list__link--vk {
+  &::before {
+    display: block;
+    width: 28px;
+    height: 28px;
+    background-color: #666666;
+    mask-image: url("../../icons/stack.svg#logo-vk");
+    mask-size: 28px 22px;
+    mask-repeat: no-repeat;
+    content: "";
+  }
+}
+
+.social-list__link--telegram {
+  &::before {
+    display: block;
+    width: 28px;
+    height: 28px;
+    background-color: #666666;
+    mask-image: url("../../icons/stack.svg#logo-telegram");
+    mask-size: 28px 22px;
+    mask-repeat: no-repeat;
+    content: "";
+  }
+}
+
+.social-list__link--youtube {
+  &::before {
+    display: block;
+    width: 28px;
+    height: 28px;
+    background-color: #666666;
+    mask-image: url("../../icons/stack.svg#logo-youtube");
+    mask-size: 28px 22px;
+    mask-repeat: no-repeat;
+    content: "";
+  }
+}
