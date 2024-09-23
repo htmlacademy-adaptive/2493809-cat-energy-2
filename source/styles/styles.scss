@@ -6,12 +6,12 @@
 @import "./common/visually-hidden.scss";
 
 /* BLOCKS */
-// @import "./blocks/page.scss";
+@import "./blocks/page.scss";
 @import "./blocks/button-primary.scss";
 @import "./blocks/button-secondary.scss";
-// @import "./blocks/main-header.scss";
+@import "./blocks/main-header.scss";
 @import "./blocks/main-nav.scss";
-// @import "./blocks/main-container.scss";
+@import "./blocks/main-container.scss";
 @import "./blocks/hero.scss";
 @import "./blocks/options.scss";
 @import "./blocks/about.scss";
@@ -29,4 +29,3 @@
 @import "./blocks/partnership.scss";
 @import "./blocks/main-footer.scss";
 @import "./blocks/social-list.scss";
-@import "./blocks/developer-wrapper.scss"

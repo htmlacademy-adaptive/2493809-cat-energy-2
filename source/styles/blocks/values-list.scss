@@ -1,13 +1,15 @@
-.values-list__value {
+.values-list {
   font-family: $primary-font;
   font-size: 12px;
   line-height: 16px;
   color: #444444;
 }
 
+.values-list__item {
+  display: flex;
+  justify-content: space-between;
+}
+
 .values-list__description {
-  font-family: $primary-font;
-  font-size: 12px;
-  line-height: 16px;
-  color: #444444;
+  margin: 0;
 }

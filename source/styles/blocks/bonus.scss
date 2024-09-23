@@ -1,12 +1,45 @@
 .bonus {
-  background-color: rgba(104, 183, 56, 0.85);
+  background-color: #68b738;
   background-image: url("../../icons/stack.svg#icon-gift");
   background-repeat: no-repeat;
+  background-size: 78px 80px;
+  background-position: center 58px;
+
+  @media (min-width: $tablet-width) {
+    background-position: 78px center;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-position: center top 56px;
+  }
 }
 
 .bonus__desc {
+  width: 161px;
+  margin: 0 auto;
+  padding-top: 186px;
+  padding-bottom: 43px;
+
   font-family: $primary-font;
   font-size: 16px;
   line-height: 20px;
   color: #ffffff;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 421px;
+    padding-top: 71px;
+    padding-bottom: 69px;
+
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 161px;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 185px;
+
+    text-align: center;
+  }
 }

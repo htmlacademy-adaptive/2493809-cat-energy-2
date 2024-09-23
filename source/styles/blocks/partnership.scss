@@ -1,10 +1,18 @@
-.partnership {
+.partnership__info {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 20px;
+
   &--in-catalog {
     background-color: #f2f2f2;
   }
 }
 
 .partnership__title {
+  width: 140px;
+  margin: 0;
+
   font-family: $secondary-font;
   font-size: 16px;
   font-weight: 400;
@@ -15,8 +23,16 @@
 }
 
 .partnership__address {
+  width: 140px;
+  margin: 0;
+
   font-family: $primary-font;
   font-size: 14px;
   line-height: 20px;
   color: #444444;
+}
+
+.partnership__map {
+  display: block;
+  width: 100%;
 }
