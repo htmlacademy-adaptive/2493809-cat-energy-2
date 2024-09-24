@@ -1,0 +1,1 @@
+var a=document.querySelector(".main-header__toggle"),e=document.querySelector(".main-nav__wrapper");a.onclick=()=>{a.classList.toggle("main-header__toggle--is-opened"),e.classList.contains("main-nav__wrapper--hidden")?e.classList.remove("main-nav__wrapper--hidden"):e.classList.add("main-nav__wrapper--hidden")};
