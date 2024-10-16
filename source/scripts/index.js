@@ -1,12 +1,13 @@
-/* в этот файл добавляет скрипты*/
-const toggleButton = document.querySelector('.main-header__toggle');
-const nav = document.querySelector('.main-nav__wrapper');
+const nav = document.querySelector('.main-nav');
+const toggleButton = document.querySelector('.main-nav__toggle');
 
-toggleButton.onclick = () => {
-  toggleButton.classList.toggle('main-header__toggle--is-opened');
-  if (nav.classList.contains('main-nav__wrapper--hidden')) {
-    nav.classList.remove('main-nav__wrapper--hidden');
+nav.classList.remove('main-nav--nojs');
+
+toggleButton.addEventListener('click', () => {
+  toggleButton.classList.toggle('main-nav__toggle--is-opened');
+  if (nav.classList.contains('main-nav--hidden')) {
+    nav.classList.remove('main-nav--hidden');
   } else {
-    nav.classList.add('main-nav__wrapper--hidden');
+    nav.classList.add('main-nav--hidden');
   }
-};
+});

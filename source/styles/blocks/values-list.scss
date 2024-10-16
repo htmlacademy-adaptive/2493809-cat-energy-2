@@ -3,11 +3,35 @@
   font-size: 12px;
   line-height: 16px;
   color: #444444;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .values-list__item {
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 7px;
+    padding-bottom: 5px;
+
+    border-bottom: 1px solid #cdcdcd;
+
+    &:last-child {
+      margin-bottom: 29px;
+
+      @media (min-width: $desktop-width) {
+        margin-bottom: 34px;
+      }
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 6px;
+  }
 }
 
 .values-list__description {

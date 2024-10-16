@@ -14,43 +14,35 @@
 
 <body class="page__body">
   <header class="main-header">
-    <div class="main-header__wrapper">
-      <a class="main-header__logo" href="#">
-        <span class="visually-hidden">Логотип Cat Energy</span>
-        <picture>
-          <source width="70" height="59" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-desktop.svg">
-          <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-tablet.svg">
-          <img class="main-header__logo-image" width="33" height="38" src="images/logo-mobile.svg" alt="Логотип.">
-        </picture>
-        <picture>
-          <source width="118" height="21" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-text.svg">
-          <source width="101" height="18" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-text.svg">
-          <img class="main-header__logo-text-image" width="101" height="18" src="images/logo-text-dark.svg" alt="Cat energy.">
-        </picture>
-      </a>
-      <nav class="main-nav">
-        <button class="main-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <div class="main-nav__wrapper main-nav__wrapper--hidden">
-          <ul class="main-nav__list">
-            <li class="main-nav__item main-nav__item--current">
-              <a href="#">
-                Главная
-              </a>
-            </li>
-            <li class="main-nav__item">
-              <a href="catalog.html">
-                Каталог продукции
-              </a>
-            </li>
-            <li class="main-nav__item">
-              <a class="primary-button" href="#">
-                Подбор программы
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
+    <a class="main-header__logo" href="#">
+      <picture>
+        <source width="202" height="59" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-desktop.svg">
+        <source width="174" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-tablet.svg">
+        <img class="main-header__logo-image" width="190" height="38" src="images/logo-mobile.svg" alt="Логотип Cat Energy.">
+      </picture>
+    </a>
+    <nav class="main-nav main-nav--inner main-nav--hidden main-nav--nojs">
+      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list">
+          <li class="main-nav__item main-nav__item--current">
+            <a href="#">
+              Главная
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a href="catalog.html">
+              Каталог продукции
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#">
+              Подбор программы
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
   </header>
 
   <main class="main-container">
@@ -67,7 +59,7 @@
           <img class="hero__image" width="280" height="270" src="images/image-can-mobile@1x.png" srcset="images/image-can-mobile@2x.png 2x" alt="Изображение продукции.">
         </picture>
       </div>
-      <button class="hero__button button-primary" type="button">Подобрать программу</button>
+      <button class="hero__button" type="button">Подобрать программу</button>
     </section>
 
     <section class="options">
@@ -89,27 +81,17 @@
     <section class="about">
       <h2 class="about__title">Как это работает</h2>
       <ul class="about__list">
-        <li class="about__item">
-          <span class="about__decoration-icon about__decoration-icon--healthy"></span>
-          <p class="about__description">Функциональное питание
-            содержит только полезные
-            питательные вещества.</p>
+        <li class="about__item about__item--healthy">
+          <p class="about__description">Функциональное питание содержит только полезные питательные вещества.</p>
         </li>
-        <li class="about__item">
-          <span class="about__decoration-icon about__decoration-icon--powder"></span>
-          <p class="about__description">Выпускается в виде порошка,
-            который нужно лишь залить
-            кипятком и готово.</p>
+        <li class="about__item about__item--powder">
+          <p class="about__description">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
         </li>
-        <li class="about__item">
-          <span class="about__decoration-icon about__decoration-icon--replace"></span>
-          <p class="about__description">Замените один-два приема
-            обычной еды на наше
-            функциональное питание.</p>
+        <li class="about__item about__item--replace">
+          <p class="about__description">Замените один-два приема обычной еды на наше функциональное питание.</p>
         </li>
-        <li class="about__item">
-          <span class="about__decoration-icon about__decoration-icon--when"></span>
-          <p class="about__description">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+        <li class="about__item about__item--when">
+          <p class="about__description">Уже через месяц наслаждайтесь изменениями к лучшему вашего&nbsp;питомца!</p>
         </li>
       </ul>
     </section>
@@ -117,7 +99,7 @@
     <section class="example">
       <div class="example__text-wrapper">
         <h2 class="example__title">Живой пример</h2>
-        <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+        <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без&nbsp;изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
       </div>
       <div class="example__info-wrapper">
         <dl class="example__facts facts-list">
@@ -130,7 +112,7 @@
             <dd class="facts-list__description">затрачено времени</dd>
           </div>
         </dl>
-        <p class="example__cost">Затраты на питание: 15 000 РУБ.</p>
+        <p class="example__cost">Затраты на питание: <span>15 000 РУБ.</span></p>
       </div>
       <div class="example__cat-slider">
         <span class="example__slider"></span>
@@ -152,9 +134,7 @@
     <section class="partnership">
       <div class="partnership__info">
         <h2 class="partnership__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
-        <p class="partnership__address">ул. Большая
-          Конюшенная, д. 19/8
-          Санкт-Петербург
+        <p class="partnership__address">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span>
         </p>
       </div>
       <picture>
@@ -162,35 +142,40 @@
         <source width="768" height="400" type="image/png" media="(min-width: 768px)" srcset="images/location-tablet@1x.png 1x, images/location-tablet@2x.png 2x">
         <img class="partnership__map" width="320" height="362" src="images/location-mobile@1x.png" srcset="images/location-mobile@2x.png 2x" alt="Карта расположения нашей компании.">
       </picture>
-
     </section>
   </main>
 
   <footer class="main-footer">
-    <img class="main-footer__text-logo" src="images/logo-text-dark.svg" alt="Текстовый логотип." width="128" height="24">
-
-    <ul class="main-footer__list social-list">
-      <li class="social-list__item">
-        <a class="social-list__link social-list__link--vk" href="https://vk.com/htmlacademy">
-          <span class="visually-hidden">Логотип ВКонтакте</span>
-        </a>
+    <ul class="main-footer__content">
+      <li class="main-footer__part">
+        <img class="main-footer__text-logo" src="images/logo-text.svg" alt="Текстовый логотип Cat Enetgy." width="128" height="24">
       </li>
-      <li class="social-list__item">
-        <a class="social-list__link social-list__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
-          <span class="visually-hidden">Логотип Ютуб</span>
-        </a>
+      <li class="main-footer__part">
+        <ul class="main-footer__list social-list">
+          <li class="social-list__item">
+            <a class="social-list__link social-list__link--vk" href="https://vk.com/htmlacademy">
+              <span class="visually-hidden">Логотип ВКонтакте</span>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link social-list__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+              <span class="visually-hidden">Логотип Ютуб</span>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link social-list__link--telegram" href="https://t.me/htmlacademy">
+              <span class="visually-hidden">Логотип Телеграм</span>
+            </a>
+          </li>
+        </ul>
       </li>
-      <li class="social-list__item">
-        <a class="social-list__link social-list__link--telegram" href="https://t.me/htmlacademy">
-          <span class="visually-hidden">Логотип Телеграм</span>
+      <li class="main-footer__part">
+        <a class="main-footer__developer" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="main-footer__developer-name">HTML Academy</span>
+          <img class="main-footer__developer-logo" width="27" height="34" src="images/logo-academy.svg" alt="Логотип html-academy.">
         </a>
       </li>
     </ul>
-
-    <a class="main-footer__developer" href="https://htmlacademy.ru/intensive/adaptive">
-      <span class="main-footer__developer-name">HTML Academy</span>
-      <img class="main-footer__developer-logo" width="27" height="34" src="images/logo-academy.svg" alt="Логотип html-academy.">
-    </a>
   </footer>
   <script src="scripts/index.js" defer></script>
 </body>
