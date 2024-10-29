@@ -121,6 +121,7 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
+    flex-shrink: 0;
     width: 175px;
     margin: 0;
     padding-top: 11px;

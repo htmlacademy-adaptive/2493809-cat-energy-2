@@ -131,12 +131,15 @@
   max-width: 457px;
 
   margin: 0;
-  margin-bottom: 38px;
+  margin-bottom: 15px;
+  padding-bottom: 23px;
 
   font-family: $primary-font;
   font-size: 14px;
   line-height: 18px;
   color: #444444;
+
+  border-bottom: 1px solid #d9d9d9;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 48px;
@@ -144,6 +147,8 @@
     font-size: 16px;
     line-height: 24px;
     color: #000000;
+
+    border-bottom: none;
   }
 
   @media (min-width: $desktop-width) {
@@ -174,22 +179,6 @@
 
     font-size: 20px;
     line-height: 30px;
-  }
-
-  &::before {
-    position: absolute;
-    top: -15px;
-
-    display: block;
-    width: 240px;
-    height: 1px;
-
-    background-color: #d9d9d9;
-    content: "";
-
-    @media (min-width: $tablet-width) {
-      content: none;
-    }
   }
 
   &::after {
