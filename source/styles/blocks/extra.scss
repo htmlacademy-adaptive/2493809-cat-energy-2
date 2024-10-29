@@ -130,7 +130,7 @@
     width: 100%;
     height: 100%;
 
-    background-image: url("../../images/catalog/background-bonus-mobile@1x.png");
+    background-image: url("../../images/catalog/background-bonus-mobile@1x.webp"), url("../../images/catalog/background-bonus-mobile@1x.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -138,23 +138,23 @@
     opacity: 0.15;
 
     @media (max-width: calc($tablet-width - 1px)) and (min-resolution: 2x) {
-      background-image: url("../../images/catalog/background-bonus-mobile@2x.png");
+      background-image: url("../../images/catalog/background-bonus-mobile@2x.webp"), url("../../images/catalog/background-bonus-mobile@2x.png");
     }
 
     @media (min-width: $tablet-width) {
-      background-image: url("../../images/catalog/background-bonus-tablet@1x.png");
+      background-image: url("../../images/catalog/background-bonus-tablet@1x.webp"), url("../../images/catalog/background-bonus-tablet@1x.png");
     }
 
     @media (min-width: $tablet-width) and (min-resolution: 2x) {
-      background-image: url("../../images/catalog/background-bonus-tablet@2x.png");
+      background-image: url("../../images/catalog/background-bonus-tablet@2x.webp"), url("../../images/catalog/background-bonus-tablet@2x.png");
     }
 
     @media (min-width: $desktop-width) {
-      background-image: url("../../images/catalog/background-bonus-desktop@1x.png");
+      background-image: url("../../images/catalog/background-bonus-desktop@1x.webp"), url("../../images/catalog/background-bonus-desktop@1x.png");
     }
 
     @media (min-width: $desktop-width) and (min-resolution: 2x) {
-      background-image: url("../../images/catalog/background-bonus-desktop@2x.png");
+      background-image: url("../../images/catalog/background-bonus-desktop@2x.webp"), url("../../images/catalog/background-bonus-desktop@2x.png");
     }
   }
 }
