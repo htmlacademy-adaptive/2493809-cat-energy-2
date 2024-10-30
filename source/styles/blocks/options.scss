@@ -181,19 +181,35 @@
     line-height: 30px;
   }
 
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
   &::after {
+    content: "";
+
     position: absolute;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
 
     width: 32px;
-    height: 11px;
+    height: 12px;
 
     background-color: #000000;
-    content: "";
     mask-image: url("../../icons/stack.svg#icon-arrow");
+    mask-size: 24px 12px;
     mask-repeat: no-repeat;
     mask-position: 0;
+    mask-origin: fill-box;
+  }
+
+  &:hover::after {
+    mask-size: 32px 12px;
+    mask-position: 100%;
+  }
+
+  &:active::after {
+    background-color: rgba(0, 0, 0, 0.3);
   }
 }

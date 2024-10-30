@@ -118,7 +118,10 @@
         <p class="example__cost">Затраты на питание: <span>15 000 РУБ.</span></p>
       </div>
       <div class="example__cat-slider">
-        <span class="example__slider"></span>
+        <button class="example__slider" type="button">
+          <span class="visually-hidden">Передвинуть ползунок слайдера</span>
+        </button>
+
         <div class="example__image-wrapper">
           <picture>
             <source width="560" height="512" type="image/webp" media="(min-width: 768px)" srcset="images/image-fat-cat-tablet@1x.webp 1x, images/image-fat-cat-tablet@2x.webp 2x">
@@ -158,7 +161,9 @@
   <footer class="main-footer">
     <ul class="main-footer__content">
       <li class="main-footer__part">
-        <img class="main-footer__text-logo" src="images/logo-text.svg" alt="Текстовый логотип Cat Enetgy." width="128" height="24">
+        <a class="main-footer__text-logo-link" href="#">
+          <img class="main-footer__text-logo" src="images/logo-text.svg" alt="Текстовый логотип Cat Enetgy." width="128" height="24">
+        </a>
       </li>
       <li class="main-footer__part">
         <ul class="main-footer__list social-list">
@@ -180,10 +185,7 @@
         </ul>
       </li>
       <li class="main-footer__part">
-        <a class="main-footer__developer" href="https://htmlacademy.ru/intensive/adaptive">
-          <span class="main-footer__developer-name">HTML Academy</span>
-          <img class="main-footer__developer-logo" width="27" height="34" src="images/logo-academy.svg" alt="Логотип html-academy.">
-        </a>
+        <a class="main-footer__developer" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
       </li>
     </ul>
   </footer>

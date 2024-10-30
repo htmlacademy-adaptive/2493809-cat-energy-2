@@ -8,12 +8,7 @@
   font-size: 20px;
   color: #444444;
 
-  border: 1px solid #cdcdcd;
-
-  &::placeholder {
-    color: #000000;
-    text-transform: uppercase;
-  }
+  border: 1px solid #e7e7e7;
 
   @media (min-width: $tablet-width) {
     width: 376px;
@@ -21,6 +16,24 @@
 
   @media (min-width: $desktop-width) {
     width: 496px;
+  }
+
+  &::placeholder {
+    color: #000000;
+    text-transform: uppercase;
+  }
+
+  &:hover {
+    border: 1px solid #cdcdcd;
+  }
+
+  &:focus {
+    outline: none;
+    border: 2px solid #444444;
+  }
+
+  &--error {
+    border: 2px solid #ff8282;
   }
 }
 

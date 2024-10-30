@@ -23,6 +23,15 @@
     mask-position: center;
     mask-repeat: no-repeat;
   }
+
+  &:hover::before,
+  &:focus::before {
+    background-color: #68b738;
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
 }
 
 .social-list__link--vk {
