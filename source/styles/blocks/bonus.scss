@@ -1,12 +1,12 @@
 .bonus {
-  background-color: #68b738;
+  background-color: $basic-green;
   background-image: url("../../icons/stack.svg#icon-gift");
   background-repeat: no-repeat;
   background-size: 78px 80px;
   background-position: center 58px;
 
   @media (min-width: $tablet-width) {
-    background-position: 78px center;
+    background-position: 78px 58px;
   }
 
   @media (min-width: $desktop-width) {
@@ -17,7 +17,7 @@
 .bonus__desc {
   width: 161px;
   margin: 0 auto;
-  padding-top: 186px;
+  padding-top: 188px;
   padding-bottom: 43px;
 
   font-family: $primary-font;

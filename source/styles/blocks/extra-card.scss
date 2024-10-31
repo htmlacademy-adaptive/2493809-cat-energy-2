@@ -9,21 +9,61 @@
   color: #222222;
 
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 24px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
 }
 
 .extra-card__values {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 13px;
+  margin-bottom: 14px;
 
   font-family: $primary-font;
   font-size: 14px;
   line-height: 14px;
   color: #444444;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+    padding-top: 3px;
+
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: space-between;
+    margin: 0;
+  }
+}
+
+.extra-card__cost {
+  @media (min-width: $tablet-width) {
+    min-width: 42px;
+    margin-left: 51px;
+
+    text-align: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+
+    text-align: left;
+  }
 }
 
 .extra-card__button {
-  display: block;
+  @include button-primary;
+
   width: 100%;
   padding: 10px 110px;
 
@@ -37,5 +77,7 @@
   @media (min-width: $desktop-width) {
     grid-row: auto;
     grid-column: auto;
+
+    padding: 10px 90px;
   }
 }

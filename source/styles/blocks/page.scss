@@ -8,12 +8,4 @@
   min-width: 320px;
   min-height: 100%;
   margin: 0 auto;
-
-  @media (min-width: $tablet-width) {
-    min-width: 708px;
-  }
-
-  @media (min-width: $desktop-width) {
-    min-width: 1220px;
-  }
 }

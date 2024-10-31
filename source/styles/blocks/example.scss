@@ -1,32 +1,41 @@
 .example {
-  //временно
+  @include mobile-width;
+  padding-top: 25px;
   padding-bottom: 40px;
 
-  background-color: #eaeaea;
-
   @media (min-width: $tablet-width) {
+    @include tablet-width;
+    padding-top: 0;
+    padding-bottom: 101px;
+
+    background: linear-gradient(to bottom, #ffffff 55.3%, #eaeaea 55.3%);
     background-color: #ffffff;
   }
 
   @media (min-width: $desktop-width) {
+    @include desktop-width;
     display: grid;
     grid-template-columns: 436px 1fr;
+    grid-column-gap: 224px;
+    padding-top: 0;
+    padding-bottom: 75px;
+
+    background: linear-gradient(to bottom, #ffffff 23%, #f2f2f2 23%);
   }
+
+
+  background-color: #eaeaea;
 }
 
 .example__text-wrapper {
-  padding: 20px;
-  padding-top: 25px;
+  margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
-    padding-right: 30px;
-    padding-bottom: 55px;
-    padding-left: 30px;
+    margin-bottom: 55px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 0;
-    padding-bottom: 69px;
+    margin-bottom: 69px;
   }
 }
 
@@ -34,13 +43,14 @@
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 99px;
-    padding: 0 30px;
+    margin-bottom: 103px;
   }
 
   @media (min-width: $desktop-width) {
     flex-wrap: wrap;
     grid-column: 1/2;
+
+    margin-bottom: 0;
   }
 }
 
@@ -55,6 +65,9 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 60px;
+
+    font-size: 60px;
+    line-height: 60px;
   }
 
   @media (min-width: $desktop-width) {
@@ -69,24 +82,31 @@
   font-size: 14px;
   line-height: 18px;
   color: #444444;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .example__facts {
   display: flex;
+  align-items: flex-start;
   gap: 32px;
   flex-wrap: wrap;
+  width: fit-content;
   margin: 0 auto;
-  padding: 0 20px;
   margin-bottom: 34px;
 
   @media (min-width: $tablet-width) {
+    gap: 42px;
     margin: 0;
   }
 
   @media (min-width: $desktop-width) {
     width: 100%;
     padding: 0;
-    margin-bottom: 55px;
+    margin-bottom: 60px;
   }
 }
 
@@ -101,17 +121,34 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
+    flex-shrink: 0;
     width: 175px;
-    height: 40px;
     margin: 0;
+    padding-top: 11px;
 
     font-size: 20px;
     text-align: right;
   }
 
   @media (min-width: $desktop-width) {
+    display: flex;
+    column-gap: 63px;
+
     width: 100%;
+    padding-top: 0;
+
     text-align: start;
+  }
+}
+
+.example__cost span {
+  @media (min-width: $tablet-width) {
+    display: block;
+    padding-top: 9px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
   }
 }
 
@@ -139,32 +176,81 @@
   top: 0;
   bottom: 0;
   left: 50%;
+  transform: translateX(-50%);
 
   display: block;
+  padding: 0;
   width: 4px;
 
   background-color: #666666;
+  border: none;
   border-radius: 2px;
 
+  cursor: pointer;
+
+  transition: background-color 0.3s, opacity 0.3s;
+
+  &:hover {
+    background-color: #68b738;
+  }
+
+  &:active {
+    opacity: 0.6;
+    background-color: #5eaa2f;
+  }
+
   &::before {
+    content: "";
+
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    left: -18px;
+    right: 50%;
+    transform: translate(50%, -50%);
+
     display: block;
     width: 40px;
     height: 40px;
 
-    background-image: url("../../icons/stack.svg#icon-slider");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 24px 18px;
     background-color: #ffffff;
 
     border: 2px solid #666666;
     border-radius: 50%;
-    content: "";
     cursor: pointer;
+
+    transition: border 0.3s;
+  }
+
+  &:hover::before {
+    border: 2px solid #68b738;
+  }
+
+  &:active::before {
+    border: 2px solid #5eaa2f;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+
+    display: block;
+    width: 24px;
+    height: 18px;
+
+    background-color: #666666;
+    mask-image: url("../../icons/stack.svg#icon-slider");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 24px 18px;
+
+    transition: background-color 0.3s;
+  }
+
+  &:hover::after {
+    background-color: #68b738;
   }
 }
 

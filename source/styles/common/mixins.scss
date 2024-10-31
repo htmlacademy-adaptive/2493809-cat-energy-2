@@ -1,9 +1,133 @@
-@mixin font-face($font-family, $font-weight, $font-style, $font-src) {
+@mixin font-face($font-family, $font-weight, $font-style, $font-src, $font-src-fallback) {
   @font-face {
     font-family: $font-family;
     font-weight: $font-weight;
     font-style: $font-style;
-    src: $font-src;
+    src: $font-src, $font-src-fallback;
     font-display: swap;
+  }
+}
+
+@mixin button-primary {
+  display: block;
+  height: 40px;
+
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+
+  background-color: $basic-green;
+  border: none;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  transition: background-color 0.3s, color 0.3s,;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+@mixin button-secondary {
+  display: block;
+
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 20px;
+  color: #444444;
+
+  background-color: #f2f2f2;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #ebebeb;
+  }
+}
+
+@mixin mobile-width {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+@mixin tablet-width {
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+@mixin desktop-width {
+  padding-right: 110px;
+  padding-left: 110px;
+}
+
+@mixin header-decoration {
+  display: inline-block;
+  padding-right: 40px;
+
+  background-color: #ffffff;
+
+
+  @media (min-width: $desktop-width) {
+    margin-right: -40px;
+    margin-left: -40px;
+  }
+
+  &::after,
+  &::before {
+    content: "";
+
+    position: absolute;
+    z-index: -1;
+    top: 9px;
+
+    display: block;
+    height: 2px;
+
+    background-color: $basic-green;
+
+    @media (min-width: $tablet-width) {
+      top: 14px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 17px;
+    }
+  }
+
+  &::after {
+    left: 0;
+    right: -20px;
+
+    @media (min-width: $tablet-width) {
+      right: -30px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: -110px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-left: 40px;
+
+    &::before {
+      right: 0;
+      left: -20px;
+
+      @media (min-width: $tablet-width) {
+        left: -30px;
+      }
+
+      @media (min-width: $desktop-width) {
+        left: -110px;
+      }
+    }
   }
 }

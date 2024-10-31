@@ -1,10 +1,15 @@
-.main-footer {
+.main-footer__content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
+  gap: 20px;
   min-width: 320px;
-  padding: 40px 20px;
+  margin: 0;
+
+  @include mobile-width;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  list-style-type: none;
 
   background-color: #f2f2f2;
 
@@ -12,26 +17,46 @@
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    padding: 55px 30px;
+
+    @include tablet-width;
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include desktop-width;
+    padding-top: 66px;
+    padding-bottom: 66px;
   }
 }
 
-.main-footer > *:not(:first-child) {
-  position: relative;
+.main-footer__part {
+  @media (max-width: $mobile-width-only) {
+    width: 100%;
+
+    &:not(:last-child) {
+      padding-bottom: 17px;
+
+      border-bottom: 1px solid #d9d9d9;
+    }
+  }
 }
 
-.main-footer > *:not(:first-child)::before {
-  content: "";
-  background-color: #d9d9d9;
-  height: 1px;
+.main-footer__text-logo {
   display: block;
-  position: absolute;
-  top: -20px;
-  right: 0;
-  left: 0;
+  margin: 0 auto;
+}
 
-  @media (min-width: $tablet-width) {
-    content: none;
+.main-footer__text-logo-link {
+  transition: opacity 0.3s;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }
 
@@ -43,10 +68,10 @@
   width: 100%;
   min-width: 132px;
   max-width: 280px;
+  margin: 0 auto;
 
-  @media (min-width: $tablet-width) {
-    min-width: 132px;
-    max-width: 332px;
+  @media (min-width: $desktop-width) {
+    max-width: 480px;
   }
 }
 
@@ -55,17 +80,44 @@
   align-items: center;
   justify-content: space-between;
   width: 280px;
+  min-height: 37px;
+  margin: 0 auto;
 
-  text-decoration: none;
-
-  @media (min-width: $tablet-width) {
-    width: 168px;
-  }
-}
-
-.main-footer__developer-name {
   font-family: $primary-font;
   font-size: 16px;
   line-height: 20px;
+  text-decoration: none;
   color: #444444;
+
+  transition: opacity 0.3s;
+
+  @media (min-width: $tablet-width) {
+    width: 168px;
+    padding-left: 5px;
+  }
+
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::after {
+    content: "";
+
+    display: block;
+    width: 27px;
+    height: 34px;
+
+    mask-image: url("../../icons/stack.svg#logo-academy");
+    mask-size: 27px 34px;
+
+    background-color: #666666;
+
+    transition: background-color 0.3s;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    background-color: #68b738;
+  }
 }

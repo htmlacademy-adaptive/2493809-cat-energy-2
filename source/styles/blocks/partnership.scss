@@ -1,8 +1,31 @@
+.partnership {
+  @media (min-width: $desktop-width) {
+    position: relative;
+  }
+}
+
 .partnership__info {
   display: flex;
   justify-content: space-between;
 
-  padding: 20px;
+  padding: 26px 20px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 200px;
+    padding: 60px 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+
+    width: 565px;
+    padding-right: 80px;
+    padding-left: 80px;
+
+    background-color: #ffffff;
+  }
 
   &--in-catalog {
     background-color: #f2f2f2;
@@ -20,6 +43,13 @@
   color: #111111;
 
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    width: 163px;
+
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .partnership__address {
@@ -30,9 +60,42 @@
   font-size: 14px;
   line-height: 20px;
   color: #444444;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 157px;
+
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
 }
 
 .partnership__map {
   display: block;
   width: 100%;
+  height: 362px;
+
+  @media (min-width: $tablet-width) {
+    height: 400px;
+  }
+
+  &--nojs {
+    display: none;
+  }
+}
+
+.partnership__map-static {
+  display: none;
+  width: 100%;
+
+  &--nojs {
+    display: block;
+  }
 }

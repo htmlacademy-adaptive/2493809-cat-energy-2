@@ -1,3 +1,16 @@
+.about {
+  @include mobile-width;
+
+  @media (min-width: $tablet-width) {
+    @include tablet-width;
+    position: relative;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include desktop-width;
+  }
+}
+
 .about__title {
   width: 280px;
   margin: 0 auto;
@@ -12,7 +25,6 @@
     width: auto;
     margin: 0;
     margin-bottom: 32px;
-    padding: 0 30px;
 
     font-size: 60px;
     line-height: 60px;
@@ -23,8 +35,10 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 280px;
+  min-width: 280px;
+  max-width: max-content;
   margin: 0 auto;
+  margin-bottom: 49px;
   padding: 0;
 
   list-style-type: none;
@@ -32,90 +46,122 @@
 
   @media (min-width: $tablet-width) {
     flex-flow: row wrap;
-    justify-content: space-between;
-    gap: 37px;
-    min-width: 650px;
-    padding: 0 30px;
+    gap: 37px 155px;
+    min-width: 82%;
+    max-width: 100%;
     margin: 0;
+    margin-bottom: 45px;
+    padding-bottom: 47px;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      display: block;
+      height: 1px;
+
+      background-color: #e6e6e6;
+    }
   }
 
   @media (min-width: $desktop-width) {
+    column-gap: 95px;
     width: 100%;
-  }
-}
+    margin-bottom: 69px;
+    padding-bottom: 0;
 
-.about__item {
-  display: flex;
-  justify-content: space-between;
-
-  &:last-child {
-    margin-bottom: 49px;
-  }
-
-  @media (min-width: $tablet-width) {
-    position: relative;
-
-    flex-direction: column;
-    justify-content: start;
-    width: 250px;
-    min-height: 280px;
-
-    &::before {
-      position: absolute;
-      z-index: -1;
-      right: 0;
-      display: block;
-      width: 136px;
-      font-family: $secondary-font;
-      font-size: 280px;
-      line-height: 280px;
-      color: #f2f2f2;
-      counter-increment: item;
-      content: counter(item);
+    &::after {
+      content: none;
     }
   }
 }
 
-.about__decoration-icon {
-  display: block;
-  width: 60px;
-  height: 60px;
+.about__item {
+  position: relative;
 
-  background-color: #68b738;
+  min-height: 60px;
+  padding-left: 80px;
+
+  @media (max-width: $mobile-width-only) {
+    display: flex;
+    align-items: center;
+  }
 
   @media (min-width: $tablet-width) {
-    width: 80px;
-    height: 80px;
-    margin-top: 40px;
-    margin-bottom: 31px;
+    width: 230px;
+    min-height: 280px;
+
+    padding: 0;
+    padding-top: 151px;
+    padding-bottom: 57px;
+
+    &::after {
+      content: counter(item);
+      counter-increment: item;
+
+      position: absolute;
+      z-index: -1;
+      right: 0;
+      top: 0;
+
+      display: block;
+      width: 121px;
+
+      font-family: $secondary-font;
+      font-size: 280px;
+      line-height: 280px;
+      text-align: right;
+      color: #f2f2f2;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 230px;
+  }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+
+    width: 60px;
+    height: 60px;
+
+    background-color: $basic-green;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (min-width: $tablet-width) {
+      top: 40px;
+
+      width: 80px;
+      height: 80px;
+    }
   }
 }
 
-.about__decoration-icon--healthy {
+.about__item--healthy::before {
   background-image: url("../../icons/stack.svg#icon-leaf");
-  background-position: center;
-  background-repeat: no-repeat;
   background-size: 30px 32px;
 }
 
-.about__decoration-icon--powder {
+.about__item--powder::before {
   background-image: url("../../icons/stack.svg#icon-mix");
-  background-position: center;
-  background-repeat: no-repeat;
   background-size: 26px 29px;
 }
 
-.about__decoration-icon--replace {
+.about__item--replace::before {
   background-image: url("../../icons/stack.svg#icon-eat");
-  background-position: center;
-  background-repeat: no-repeat;
   background-size: 25px 30px;
 }
 
-.about__decoration-icon--when {
+.about__item--when::before {
   background-image: url("../../icons/stack.svg#icon-scales");
-  background-position: center;
-  background-repeat: no-repeat;
   background-size: 26px 31px;
 }
 
@@ -129,6 +175,8 @@
   color: #444444;
 
   @media (min-width: $tablet-width) {
+    width: 245px;
+
     font-size: 16px;
     line-height: 24px;
   }
