@@ -1,0 +1,1 @@
+var n=document.querySelector(".main-nav"),e=document.querySelector(".main-nav__toggle");n.classList.remove("main-nav--nojs");e.addEventListener("click",()=>{e.classList.toggle("main-nav__toggle--is-opened"),n.classList.contains("main-nav--hidden")?n.classList.remove("main-nav--hidden"):n.classList.add("main-nav--hidden")});
