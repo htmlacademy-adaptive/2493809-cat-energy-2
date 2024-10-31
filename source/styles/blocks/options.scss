@@ -174,6 +174,8 @@
   text-decoration: none;
   text-transform: uppercase;
 
+  transition: color 0.3s;
+
   @media (min-width: $tablet-width) {
     padding-right: 57px;
 
@@ -196,12 +198,15 @@
     width: 32px;
     height: 12px;
 
-    background-color: #000000;
     mask-image: url("../../icons/stack.svg#icon-arrow");
     mask-size: 24px 12px;
     mask-repeat: no-repeat;
     mask-position: 0;
     mask-origin: fill-box;
+
+    background-color: #000000;
+
+    transition: background-color 0.3s, mask-size 0.3s, mask-position 0.3s;
   }
 
   &:hover::after {

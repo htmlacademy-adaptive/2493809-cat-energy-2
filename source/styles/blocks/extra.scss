@@ -122,6 +122,8 @@
 
 
   &::before {
+    content: "";
+
     position: absolute;
     top: 0;
     left: 0;
@@ -134,7 +136,6 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    content: "";
     opacity: 0.15;
 
     @media (max-width: calc($tablet-width - 1px)) and (min-resolution: 2x) {

@@ -22,6 +22,8 @@
   text-transform: uppercase;
   text-decoration: none;
 
+  transition: background-color 0.3s, color 0.3s,;
+
   &:hover {
     background-color: #5eaa2f;
   }
@@ -42,6 +44,8 @@
   background-color: #f2f2f2;
   text-transform: uppercase;
   text-decoration: none;
+
+  transition: background-color 0.3s;
 
   &:hover {
     background-color: #ebebeb;

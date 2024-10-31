@@ -32,6 +32,8 @@
   }
 
   &::before {
+    content: "";
+
     position: absolute;
     top: 0;
     left: 0;
@@ -44,7 +46,6 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    content: "";
     opacity: 0.15;
 
     @media (max-width: $mobile-width-only) and (min-resolution: 2x) {
@@ -58,10 +59,13 @@
 
     @media (min-width: $desktop-width) {
       content: "";
+
       top: -188px;
       left: 50%;
+
       height: 694px;
       width: 50%;
+
       background-image: url("../../images/background-hero-desktop@1x.webp"), url("../../images/background-hero-desktop@1x.png");
     }
 
@@ -73,8 +77,9 @@
   @media (min-width: $desktop-width) {
     &::after {
       content: "";
-      z-index: -1;
+
       position: absolute;
+      z-index: -1;
       top: -188px;
       left: 0;
 

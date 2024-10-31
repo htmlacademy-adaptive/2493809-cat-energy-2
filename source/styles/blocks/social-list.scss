@@ -19,9 +19,12 @@
     width: 28px;
     height: 22px;
 
-    background-color: #666666;
     mask-position: center;
     mask-repeat: no-repeat;
+
+    background-color: #666666;
+
+    transition: background-color 0.3s, opacity 0.3s;
   }
 
   &:hover::before,
