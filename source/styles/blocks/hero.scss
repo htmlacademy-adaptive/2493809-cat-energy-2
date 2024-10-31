@@ -43,14 +43,22 @@
     width: 100%;
     height: 100%;
 
-    background-image: url("../../images/background-hero-mobile@1x.webp"), url("../../images/background-hero-mobile@1x.png");
+    background-image:
+      image-set(
+        url("../../images/background-hero-mobile@1x.webp") type("image/webp"),
+        url("../../images/background-hero-mobile@1x.png") type("image/png")
+      );
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 0.15;
 
     @media (max-width: $mobile-width-only) and (min-resolution: 2x) {
-      background-image: url("../../images/background-hero-mobile@2x.webp"), url("../../images/background-hero-mobile@2x.png");
+      background-image:
+        image-set(
+          url("../../images/background-hero-mobile@2x.webp") type("image/webp"),
+          url("../../images/background-hero-mobile@2x.png") type("image/png")
+        );
     }
 
     @media (min-width: $tablet-width) {
@@ -66,11 +74,19 @@
       height: 694px;
       width: 50%;
 
-      background-image: url("../../images/background-hero-desktop@1x.webp"), url("../../images/background-hero-desktop@1x.png");
+      background-image:
+        image-set(
+          url("../../images/background-hero-desktop@1x.webp") type("image/webp"),
+          url("../../images/background-hero-desktop@1x.png") type("image/png")
+        );
     }
 
     @media (min-width: $desktop-width) and (min-resolution: 2x) {
-      background-image: url("../../images/background-hero-desktop@2x.webp"), url("../../images/background-hero-desktop@2x.png");
+      background-image:
+        image-set(
+          url("../../images/background-hero-desktop@2x.webp") type("image/webp"),
+          url("../../images/background-hero-desktop@2x.png") type("image/png")
+        );
     }
   }
 
