@@ -10,7 +10,7 @@
 
 @mixin button-primary {
   display: block;
-  height: 40px;
+  min-height: 40px;
 
   font-family: $secondary-font;
   font-size: 16px;
