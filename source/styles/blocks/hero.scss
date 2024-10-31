@@ -28,6 +28,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    position: static;
     padding-left: 190px;
   }
 
@@ -60,7 +61,6 @@
     @media (min-width: $desktop-width) {
       content: "";
 
-      top: -188px;
       left: 50%;
 
       height: 694px;
@@ -80,7 +80,7 @@
 
       position: absolute;
       z-index: -1;
-      top: -188px;
+      top: 0;
       left: 0;
 
       display: block;
