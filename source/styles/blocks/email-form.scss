@@ -33,11 +33,13 @@
 
   &:focus {
     outline: none;
-    border: 2px solid #444444;
+    border: none;
+    box-shadow: inset 2px 2px #444444, inset -2px -2px #444444;
   }
 
   &--error {
-    border: 2px solid #ff8282;
+    border: none;
+    box-shadow: inset 2px 2px #ff8282, inset -2px -2px #ff8282;
   }
 }
 
