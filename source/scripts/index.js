@@ -1,13 +1,13 @@
-const nav = document.querySelector('.main-nav');
+const navEl = document.querySelector('.main-nav');
 const toggleButton = document.querySelector('.main-nav__toggle');
+const staticMapEl = document.querySelector('.partnership__map-static');
+const mapEl = document.querySelector('.partnership__map');
 
-nav.classList.remove('main-nav--nojs');
+navEl.classList.remove('main-nav--nojs');
+staticMapEl.classList.remove('partnership__map-static--nojs');
+mapEl.classList.remove('partnership__map--nojs');
 
 toggleButton.addEventListener('click', () => {
   toggleButton.classList.toggle('main-nav__toggle--is-opened');
-  if (nav.classList.contains('main-nav--hidden')) {
-    nav.classList.remove('main-nav--hidden');
-  } else {
-    nav.classList.add('main-nav--hidden');
-  }
+  navEl.classList.toggle('main-nav--hidden');
 });
