@@ -90,8 +90,10 @@
   }
 }
 
-.main-nav--inner .main-nav__list {
-  max-width: 605px;
+@media (min-width: $desktop-width) {
+  .main-nav--inner .main-nav__list {
+    max-width: 605px;
+  }
 }
 
 .main-nav__item {
