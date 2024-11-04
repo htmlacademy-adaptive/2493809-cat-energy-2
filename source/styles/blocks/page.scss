@@ -2,8 +2,6 @@
   position: relative;
 
   height: 100%;
-  max-width: 1600px;
-  margin: 0 auto;
 }
 
 .page__body {
@@ -12,4 +10,32 @@
   min-width: 320px;
   min-height: 100%;
   margin: 0 auto;
+}
+
+.page__container {
+  box-sizing: content-box;
+
+  min-width: 280px;
+
+  @include mobile-width;
+  margin: 0 auto;
+
+  @media (max-width: $mobile-width-only) {
+    max-width: 460px;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-width: 708px;
+
+    @include tablet-width;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include desktop-width;
+    min-width: 1220px;
+    max-width: 1600px;
+  }
+
+  // padding: 55px 110px 74px;
+  // box-sizing: content-box;
 }

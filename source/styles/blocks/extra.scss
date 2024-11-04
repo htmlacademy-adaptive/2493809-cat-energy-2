@@ -1,20 +1,10 @@
-.extra {
-  @include mobile-width;
-
-  @media (min-width: $tablet-width) {
-    @include tablet-width;
-  }
-
-  @media (min-width: $desktop-width) {
-    @include desktop-width;
-  }
-}
-
 .extra__title {
+  @include header-decoration;
+
   position: relative;
 
   margin: 0;
-  margin-bottom: 34px;
+  margin-bottom: 35px;
 
   font-family: $secondary-font;
   font-size: 24px;
@@ -23,19 +13,18 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 78px;
+    margin-left: 40px;
 
     font-size: 32px;
     line-height: 32px;
   }
 
   @media (min-width: $desktop-width) {
+    margin-left: 0;
+
     font-size: 40px;
     line-height: 40px;
   }
-}
-
-.extra__title span {
-  @include header-decoration;
 }
 
 .extra__wrapper {

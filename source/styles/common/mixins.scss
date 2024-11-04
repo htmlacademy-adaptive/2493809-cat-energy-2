@@ -68,7 +68,7 @@
 }
 
 @mixin header-decoration {
-  display: inline-block;
+
   padding-right: 40px;
 
   background-color: #ffffff;
@@ -131,3 +131,34 @@
     }
   }
 }
+
+@mixin header-decoration {
+  width: fit-content;
+
+  background-color: #ffffff;
+  box-shadow: -40px 0 0 0 #ffffff, 40px 0 0 0 #ffffff;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    z-index: -1;
+    top: 9px;
+    right: 0;
+
+    width: 100vw;
+    height: 2px;
+
+    background-color: $basic-green;
+    box-shadow: 100vw 0 0 0 $basic-green;
+
+    @media (min-width: $tablet-width) {
+      top: 14px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 17px;
+    }
+  }
+}
+

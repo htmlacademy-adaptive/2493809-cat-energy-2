@@ -6,7 +6,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 266px;
+    max-width: 1600px;
+    margin: 0 auto 266px;
   }
 }
 
@@ -17,6 +18,13 @@
   padding: 27px 35px 164px 36px;
 
   background-color: $basic-green;
+
+  @media (max-width: $mobile-width-only) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
@@ -73,7 +81,6 @@
 
       height: 694px;
       width: 50%;
-      max-width: 800px;
 
       background-image:
         image-set(
