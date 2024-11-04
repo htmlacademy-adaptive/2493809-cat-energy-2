@@ -2,17 +2,21 @@
   @media (min-width: $desktop-width) {
     position: relative;
   }
+
+  &--in-catalog {
+    background-color: #f2f2f2;
+  }
 }
 
 .partnership__info {
   display: flex;
   justify-content: space-between;
 
-  padding: 26px 20px;
+  padding: 26px 0;
 
   @media (min-width: $tablet-width) {
     min-height: 200px;
-    padding: 60px 70px;
+    padding: 60px 40px;
   }
 
   @media (min-width: $desktop-width) {
@@ -25,10 +29,6 @@
     padding-left: 80px;
 
     background-color: #ffffff;
-  }
-
-  &--in-catalog {
-    background-color: #f2f2f2;
   }
 }
 

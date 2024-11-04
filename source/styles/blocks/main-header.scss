@@ -1,17 +1,24 @@
 .main-header {
   position: relative;
 
+  width: 100%;
+
   @include mobile-width;
   padding-top: 13px;
   padding-bottom: 14px;
 
   @media (min-width: $tablet-width) {
     @include tablet-width;
+    max-width: none;
     padding-top: 25px;
     padding-bottom: 65px;
   }
 
   @media (min-width: $desktop-width) {
+    max-width: 1820px;
+    width: 100%;
+    margin: 0 auto;
+
     @include desktop-width;
     padding-top: 55px;
     padding-bottom: 74px;
