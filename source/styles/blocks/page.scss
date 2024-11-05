@@ -31,11 +31,11 @@
   }
 
   @media (min-width: $desktop-width) {
-    @include desktop-width;
-    min-width: 1220px;
-    max-width: 1600px;
-  }
+    position: relative;
 
-  // padding: 55px 110px 74px;
-  // box-sizing: content-box;
+    min-width: 1220px;
+    max-width: 1220px;
+
+    @include desktop-width;
+  }
 }

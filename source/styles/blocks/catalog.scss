@@ -32,7 +32,7 @@
 
   @media (min-width: $tablet-width) {
     display: grid;
-    align-items: center;
+    align-items: start;
     grid-template-columns: repeat(auto-fit, minmax(324px, 1fr));
     gap: 60px;
     margin-bottom: 74px;
